@@ -5,8 +5,8 @@
 //  Created by Лина Вельтман on 26/02/2020.
 //  Copyright © 2020 Lina Veltman. mll rights reserved.
 //
-#ifndef matrix_hpp
-#define matrix_hpp
+#ifndef lab1_2_hpp
+#define lab1_2_hpp
 
 #include "matrix.hpp"
 
@@ -98,3 +98,5 @@ bool lab1_2() {
     
     return true;
 }
+
+#endif /* lab1_2_hpp */
