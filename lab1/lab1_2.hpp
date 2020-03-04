@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  lab1_2.hpp
 //  lab1
 //
 //  Created by Лина Вельтман on 26/02/2020.
@@ -32,7 +32,7 @@ void ThomasAlgorithm(std::vector<std::vector<double>>& koef, std::vector<double>
     }
 }
 
-void InitMatrix(Matrix& m) {
+void InitMatrix2(Matrix& m) {
     m = Matrix(5, 5);
     m[0][0] = 15.0;
     m[0][1] = 8.0;
@@ -65,7 +65,7 @@ void InitMatrix(Matrix& m) {
     m[4][4] = 8.0;
 }
 
-void InitVectorB(std::vector<double>& b) {
+void InitVectorB2(std::vector<double>& b) {
     b[0] = 92.0;
     b[1] = -84.0;
     b[2] = -77.0;
@@ -75,9 +75,9 @@ void InitVectorB(std::vector<double>& b) {
 
 bool lab1_2() {
     Matrix m;
-    InitMatrix(m);
+    InitMatrix2(m);
     std::vector<double> b(m.getRow()), x(m.getRow(), 0.0);
-    InitVectorB(b);
+    InitVectorB2(b);
     
     try {
         if (!m.isTridiagonalMatrix()) {
@@ -86,6 +86,7 @@ bool lab1_2() {
         std::vector<std::vector<double>> tmp;
         m.getKoefficients(tmp);
         ThomasAlgorithm(tmp, b, x);
+        std::cout << "S O L U T I O N: " << std::endl;
         for (int i = 0; i < x.size(); ++i) {
             std::cout << "X" << i + 1 << " = " << x[i] << " ";
         }
