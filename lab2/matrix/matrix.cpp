@@ -201,28 +201,5 @@ bool Matrix::isSimmetricalMatrix() const{
     }
 }
 
-double Matrix::get_norm() const {
-    double max = 0.0;
-    for (int i = 0; i < row; ++i) {
-        double ans = 0.0;
-        for (int j = 0; j < column; ++j) {
-            ans += abs(_matrix[i][j]);
-        }
-        max = max > ans ? max : ans;
-    }
-    return max;
-}
-
-double Matrix::get_upper_norma() const{
-    double max = 0.0;
-    for (int i = 0; i < row; ++i){
-        double ans = 0.0;
-        for (int j = 0; j <= i; ++j) {
-            ans += abs(_matrix[i][j]);
-        }
-        max = max > ans ? max : ans;
-    }
-    return max;
-}
 
 Matrix::~Matrix() {}

@@ -34,8 +34,6 @@ public:
     int32_t getColumn() const;
     std::vector<std::vector<double>> getMatrix();
     void getKoefficients(std::vector<std::vector<double>>&);
-    double get_norm() const;
-    double get_upper_norma() const;
     
     void unitary();
     void transpose();
